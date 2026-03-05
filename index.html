@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AmazonClone Pro</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>AmazonClone <span>Pro</span></h1>
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Search products..." />
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+        </select>
+      </div>
+      <div class="actions">
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button id="wishlistBtn">💖 Wishlist (<span id="wishlistCount">0</span>)</button>
+        <button id="cartBtn">🛒 Cart (<span id="cartCount">0</span>)</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="promo">
+        <h2>Smart Deals Engine</h2>
+        <p>New feature: Personalized recommendations based on your cart and wishlist activity.</p>
+      </section>
+
+      <section>
+        <h3>Products</h3>
+        <div id="products" class="grid"></div>
+      </section>
+
+      <section>
+        <h3>Recommended for you</h3>
+        <div id="recommendations" class="grid"></div>
+      </section>
+    </main>
+
+    <dialog id="cartDialog">
+      <h4>Your Cart</h4>
+      <ul id="cartItems"></ul>
+      <p id="cartTotal"></p>
+      <button onclick="document.getElementById('cartDialog').close()">Close</button>
+    </dialog>
+
+    <dialog id="wishlistDialog">
+      <h4>Your Wishlist</h4>
+      <ul id="wishlistItems"></ul>
+      <button onclick="document.getElementById('wishlistDialog').close()">Close</button>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
